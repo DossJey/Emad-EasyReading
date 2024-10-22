@@ -1,12 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
+
 import { StyleSheet, Text, View } from 'react-native';
+import { PaperProvider, Button } from 'react-native-paper';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <PaperProvider>
+      <View style={styles.container}>
+        <Text>Benvenuto in React Native Paper!</Text>
+        <Button icon="camera" mode="contained" onPress={() => console.log('Pressed')}>
+          Alex merda
+        </Button>
+      </View>
+    </PaperProvider>
   );
 }
 
